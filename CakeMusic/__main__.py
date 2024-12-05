@@ -7,7 +7,7 @@ loop = asyncio.get_event_loop()
 
 async def main():
       for all_module in ALL_MODULES:
-      importlib.import_module("CakeMusic.plugins" + all_module)
+          importlib.import_module("CakeMusic.plugins" + all_module)
      await bot.start() 
      await app.start()
      await call.start() 
