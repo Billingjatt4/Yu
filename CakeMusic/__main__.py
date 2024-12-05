@@ -5,6 +5,8 @@ from CakeMusic.plugins.play import app, call
 
 LOGGER = logging.getLogger("YukkiMusic")
 
+loop = asyncio.get_event_loop()
+
 async def main():
       
       await app.start()
