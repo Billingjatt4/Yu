@@ -1,6 +1,9 @@
-import os
+import re
+import sys
 from os import getenv
+from dotenv import load_dotenv
 
+load_dotenv()
 API_ID = int(getenv("API_ID", "25742938"))
 API_HASH = getenv("API_HASH", "b35b715fe8dc0a58e8048988286fc5b6")
 BOT_TOKEN = getenv("BOT_TOKEN", "7656510911:AAHx2GcEV9q_HOQ5NjysO1V2cMdAaVQpz8Y")
