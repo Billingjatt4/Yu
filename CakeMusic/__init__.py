@@ -15,7 +15,7 @@ app = Client(
 
 
 # Dynamically load plugins
-PLUGIN_DIR = "CakeMusic/plugins"
+PLUGIN_DIR = "plugins"
 for plugin_file in glob.glob(f"{PLUGIN_DIR}/*.py"):
     plugin_name = os.path.basename(plugin_file)[:-3]
     if plugin_name != "__init__":
