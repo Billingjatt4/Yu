@@ -7,9 +7,9 @@ LOGGER = logging.getLogger("YukkiMusic")
 
 async def main():
       try:
-          await call.start()
+         # await call.start()
           await bot.start() 
-          await app.start() 
+        #  await app.start() 
       except Exception:
           pass
       LOGGER.info("✅ Bot Started.")
