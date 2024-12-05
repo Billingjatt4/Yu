@@ -5,13 +5,12 @@ from CakeMusic.plugins import ALL_MODULES
 
 loop = asyncio.get_event_loop()
 
-def LOGGER(name: str) -> logging.Logger:
-    return logging.getLogger(name)
+LOGGER = logging.getLogger("YukkiMusic")
 
 async def main():
       for all_module in ALL_MODULES:
           importlib.import_module("CakeMusic.plugins" + all_module)
-      LOGGER("CakeMusic.plugins").info(
+      LOGGER.info("CakeMusic.plugins").info(
         "Successfully Imported Modules"
       )
       await bot.start() 
