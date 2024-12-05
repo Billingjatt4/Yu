@@ -1,3 +1,4 @@
+from config import *
 from CakeMusic import bot
 from CakeMusic.plugins.play import add_served_user
 from pyrogram import Client, filters
