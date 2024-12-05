@@ -1,14 +1,13 @@
-import asyncio, sys, logging
+import asyncio
 from pyrogram import idle
 from CakeMusic import bot
 from CakeMusic.plugins.play import app, call
 
-LOGGER = logging.getLogger("YukkiMusic")
 
 loop = asyncio.get_event_loop()
 
 async def main():
-      
+      await bot.start() 
       await app.start()
       await idle()
     
