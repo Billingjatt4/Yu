@@ -1,7 +1,7 @@
 from CakeMusic import bot
 from CakeMusic import *
 from CakeMusic.plugins.play import *
-from pyrogram import Client, filters as pyrofl
+from pyrogram import Client, filters
 from pyrogram.enums import ChatMemberStatus, ChatType
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from typing import Union, List, Pattern
@@ -12,7 +12,7 @@ def cdx(commands: Union[str, List[str]]):
     return pyrofl.command(commands, ["/", "!", "."])
 
 
-@bot.on_message(cdx(["start", "help"]) & pyrofl.private)
+@bot.on_message(filters.command(["start", "help"]) & filters.private)
 async def start_message_private(client, message):
     user_id = message.from_user.id
     mention = message.from_user.mention
@@ -73,7 +73,7 @@ With Your ☛ Other Friends.**"""
 
 
 
-@bot.on_callback_query(rgx("open_command_list"))
+@bot.on_callback_query(filters.command("open_command_list"))
 async def open_command_list_alert(client, query):
     caption = """**🥀 All Members Can Use:**
 /play - Stream Only Audio On VC.
@@ -104,7 +104,7 @@ Only in Channels/Groups."""
         return
 
 
-@bot.on_callback_query(rgx("back_to_home"))
+@bot.on_callback_query(filters.command("back_to_home"))
 async def back_to_home_menu(client, query):
     mention = query.from_user.mention
     caption = f"""**➻ Hello, {mention}
@@ -142,7 +142,7 @@ With Your ☛ Other Friends.**"""
         return
 
 
-@bot.on_callback_query(rgx("force_close"))
+@bot.on_callback_query(filters.command("force_close"))
 async def delete_cb_query(client, query):
     try:
         return await query.message.delete()
