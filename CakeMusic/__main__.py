@@ -8,6 +8,8 @@ loop = asyncio.get_event_loop()
 LOGGER = logging.getLogger("YukkiMusic")
 
 async def main():
+      LOGGER.info("✅ All Directories Updated.")
+      await asyncio.sleep(1)
       for all_module in ALL_MODULES:
           importlib.import_module("CakeMusic.plugins" + all_module)
       LOGGER.info("CakeMusic.plugins")
