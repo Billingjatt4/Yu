@@ -1,4 +1,5 @@
 import asyncio, sys
+from pyrogram import idle
 from CakeMusic import bot
 from CakeMusic.plugins.play import app, call
 
@@ -8,7 +9,7 @@ async def main():
           await bot.start() 
           await app.start() 
       except Exception as e:
-          sys.exit()
+          await idle()
 
 # Run the bot
 if __name__ == "__main__":
