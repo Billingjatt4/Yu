@@ -1,5 +1,4 @@
 import asyncio, logging
-from logging.handlers import RotatingFileHandler
 from pyrogram import idle  
 from CakeMusic import bot, app, call
 from CakeMusic.plugins import ALL_MODULES
@@ -11,9 +10,7 @@ LOGGER = logging.getLogger("YukkiMusic")
 async def main():
       for all_module in ALL_MODULES:
           importlib.import_module("CakeMusic.plugins" + all_module)
-      LOGGER.info("CakeMusic.plugins").info(
-        "Successfully Imported Modules"
-      )
+      LOGGER.info("CakeMusic.plugins")
       await bot.start() 
       await app.start()
       await call.start() 
