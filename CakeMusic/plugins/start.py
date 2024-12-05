@@ -1,6 +1,5 @@
-from CakeMusic import bot 
+from CakeMusic import bot as bot
 from pyrogram import Client, filters
-from pyrogram.enums import ChatMemberStatus, ChatType
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 @bot.on_message(filters.command(["start", "help"]))
