@@ -18,10 +18,6 @@ async def main():
       # Make client On
       await idle() 
     
-if __name__ == "__main__":
-     print("Bot is starting...")
-     loop.run_until_complete(main())
-
 
 
 
@@ -75,4 +71,5 @@ def main():
     bot.run()
 
 if __name__ == "__main__":
-    main()
+     print("Bot is starting...")
+     loop.run_until_complete(main())
