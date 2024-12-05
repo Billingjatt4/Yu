@@ -1,6 +1,6 @@
 import os, logging
 from CakeMusic import app as bot
-from CakeMusic.plugins.Play import app, call
+from CakeMusic.plugins.play import app, call
 from logging.handlers import RotatingFileHandler
 from pyrogram import idle, Client, filters
 from config import *
