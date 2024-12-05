@@ -8,8 +8,8 @@ async def main():
           await call.start()
           await bot.start() 
           await app.start() 
-      except Exception as e:
-          await idle()
+      except Exception:
+          pass
 
 # Run the bot
 if __name__ == "__main__":
