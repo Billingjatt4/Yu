@@ -1,7 +1,7 @@
 import aiohttp, aiofiles, asyncio, base64, logging
 import os, platform, random, re, socket
 import sys, time, textwrap
-from CakeMusic import bot
+from CakeMusic import bot, app, call
 from os import getenv
 from io import BytesIO
 from time import strftime
@@ -43,13 +43,6 @@ from PIL import Image, ImageDraw, ImageEnhance
 from PIL import ImageFilter, ImageFont, ImageOps
 from youtubesearchpython.__future__ import VideosSearch
 
-app = Client(
-    name="App",
-    api_id=API_ID,
-    api_hash=API_HASH,
-    session_string=str(STRING_SESSION),
-)
-
 
 # Memory Database
 
@@ -81,7 +74,6 @@ bot_owner_only = pyrofl.user(OWNER_ID)
 # all clients
 
 
-call = PyTgCalls(app)
 call_config = GroupCallConfig(auto_start=False)
 
 mongo_async_cli = _mongo_async_(MONGO_DB_URL)
