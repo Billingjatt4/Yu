@@ -1,5 +1,5 @@
 from CakeMusic import bot
-from CakeMusic.plugins.play import add_served_user, delete_cb_query, back_to_home_menu
+from CakeMusic.plugins.play import add_served_user
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
