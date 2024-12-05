@@ -1,21 +1,13 @@
-import os, asyncio, importlib
-from pathlib import Path 
+import asyncio
 from pyrogram import idle  
 from CakeMusic import bot, app, call
+from CakeMusic.plugins import ALL_MODULES
 
 #loop = asyncio.get_event_loop()
 
 def main():
-      plugins_path = Path("./CakeMusic/")  # Get the plugins directory
-      plugin_files = [f.stem for f in plugins_path.glob("*.py") if f.is_file() and not f.stem.startswith("__")]
-
-      for plugin in plugin_files:
-          try:
-             importlib.import_module(f"plugins.{plugin}")
-             print(f"Successfully imported plugin: {plugin}")
-          except Exception as e:
-             print(f"Failed to import plugin: {plugin}. Error: {e}")
-
+      for all_module in ALL_MODULES:
+        importlib.import_module("CakeMusic.plugins" + all_module)
       bot.start() 
       app.start()
       call.start() 
