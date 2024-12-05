@@ -1,5 +1,6 @@
 from CakeMusic import bot
 from CakeMusic import *
+from CakeMusic.plugins.play import *
 from pyrogram import Client, filters as pyrofl
 from pyrogram.enums import ChatMemberStatus, ChatType
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
