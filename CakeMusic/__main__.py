@@ -7,13 +7,10 @@ LOGGER = logging.getLogger("YukkiMusic")
 
 async def main():
       
-        LOGGER.info("✅ Bot Started.")
-        # await call.start()
-          await bot.start() 
-        #  await app.start() 
-           await idle()
-      
-
-# Run the bot
+      await app.start()
+      await idle()
+    
 if __name__ == "__main__":
+    loop.run_until_complete(main())
     print("Bot is starting...")
+       
