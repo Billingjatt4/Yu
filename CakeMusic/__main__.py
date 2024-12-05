@@ -1,7 +1,6 @@
 import asyncio
 from pyrogram import idle
-from CakeMusic import bot
-from CakeMusic.plugins.play import app, call
+from CakeMusic import bot, app, call
 
 loop = asyncio.get_event_loop()
 
