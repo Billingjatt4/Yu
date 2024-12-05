@@ -5,7 +5,7 @@ from CakeMusic import bot, app, call
 loop = asyncio.get_event_loop()
 
 async def main():
-      plugins_path = Path(plugins).parent  # Get the plugins directory
+      plugins_path = CakeMusic/plugins  # Get the plugins directory
       plugin_files = [f.stem for f in plugins_path.glob("*.py") if f.is_file() and not f.stem.startswith("__")]
 
       for plugin in plugin_files:
