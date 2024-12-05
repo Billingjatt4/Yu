@@ -1,10 +1,9 @@
-from CakeMusic import bot
+from CakeMusic import bot 
 from pyrogram import Client, filters
 from pyrogram.enums import ChatMemberStatus, ChatType
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
-
-@bot.on_message(filters.command(["start", "help"]) & filters.private)
+@bot.on_message(filters.command(["start", "help"]))
 async def start_message_private(client, message):
     user_id = message.from_user.id
     mention = message.from_user.mention
