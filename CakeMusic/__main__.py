@@ -23,6 +23,6 @@ def main():
     
 if __name__ == "__main__":
    #  print("Bot is starting...")
-     print("All plugins imported successfully.")
+    # print("All plugins imported successfully.")
     # loop.run_until_complete(main())
      main()
