@@ -6,3 +6,4 @@ if __name__ == "__main__":
     print("Bot is starting...")
     bot.run()
     app.run() 
+    call.run() 
