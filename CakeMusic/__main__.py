@@ -1,5 +1,5 @@
 import sys, os, logging, asyncio
-from CakeMusic import app as bot
+from CakeMusic import bot
 from CakeMusic.plugins.play import app, call
 from logging.handlers import RotatingFileHandler
 from pyrogram import idle, Client, filters
