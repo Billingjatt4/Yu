@@ -5,6 +5,9 @@ from CakeMusic.plugins import ALL_MODULES
 
 loop = asyncio.get_event_loop()
 
+def LOGGER(name: str) -> logging.Logger:
+    return logging.getLogger(name)
+
 async def main():
       for all_module in ALL_MODULES:
           importlib.import_module("CakeMusic.plugins" + all_module)
@@ -15,9 +18,6 @@ async def main():
       await app.start()
       await call.start() 
       await idle()
-
-def LOGGER(name: str) -> logging.Logger:
-    return logging.getLogger(name)
 
 if __name__ == "__main__":
      print("Bot is starting...")
