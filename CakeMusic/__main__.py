@@ -1,7 +1,9 @@
-import asyncio, sys
+import asyncio, sys, logging
 from pyrogram import idle
 from CakeMusic import bot
 from CakeMusic.plugins.play import app, call
+
+LOGGER = logging.getLogger("YukkiMusic")
 
 async def main():
       try:
@@ -10,6 +12,7 @@ async def main():
           await app.start() 
       except Exception:
           pass
+      LOGGER.info("✅ Bot Started.")
 
 # Run the bot
 if __name__ == "__main__":
