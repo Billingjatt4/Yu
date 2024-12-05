@@ -3,6 +3,31 @@ from CakeMusic import bot
 from CakeMusic.plugins.play import add_served_user
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
+from pyrogram.enums import ChatMemberStatus, ChatType
+from pyrogram.errors import (
+    ChatAdminRequired,
+    FloodWait,
+    InviteRequestSent,
+    UserAlreadyParticipant,
+    UserNotParticipant,
+)
+import aiohttp, aiofiles, asyncio, base64, logging
+import os, platform, random, re, socket
+import sys, time, textwrap
+
+from os import getenv
+from io import BytesIO
+from time import strftime
+from functools import partial
+from dotenv import load_dotenv
+from datetime import datetime
+from typing import Union, List, Pattern
+from logging.handlers import RotatingFileHandler
+
+
+from git import Repo
+from git.exc import GitCommandError, InvalidGitRepositoryError
+from motor.motor_asyncio import AsyncIOMotorClient as _mongo_async_
 
 @bot.on_message(filters.command(["start", "help"]))
 async def start_message_private(client, message):
