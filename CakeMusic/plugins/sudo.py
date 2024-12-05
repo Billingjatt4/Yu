@@ -1,6 +1,6 @@
 from pyrogram import Client, filters
 from pyrogram.types import Message
-from config import API_ID, API_HASH, BOT_TOKEN, OWNER_ID
+from config import OWNER_ID
 from CakeMusic import bot
 
 # Store sudo users in a set
