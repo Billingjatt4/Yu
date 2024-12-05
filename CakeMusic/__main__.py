@@ -11,7 +11,8 @@ from dotenv import load_dotenv
 from datetime import datetime
 from typing import Union, List, Pattern
 from logging.handlers import RotatingFileHandler
-
+import os
+import glob
 
 from git import Repo
 from git.exc import GitCommandError, InvalidGitRepositoryError
@@ -144,6 +145,13 @@ async def main():
     LOGGER.info("✅ Sucessfully Hosted Your Bot !!")
     LOGGER.info("✅ Now Do Visit: @AdityaServer !!")
     await idle()
+    # Dynamically load plugins
+    PLUGIN_DIR = "plugins"
+    for plugin_file in glob.glob(f"{PLUGIN_DIR}/*.py"):
+    plugin_name = os.path.basename(plugin_file)[:-3]
+    if plugin_name != "__init__":
+        __import__(f"{PLUGIN_DIR}.{plugin_name}")
+
 
 
 
