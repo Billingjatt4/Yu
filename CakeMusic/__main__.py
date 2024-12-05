@@ -24,5 +24,6 @@ async def main():
 if __name__ == "__main__":
      print("Bot is starting...")
      main()
+     print("All plugins imported successfully.")
      loop.run_until_complete(main())
       
