@@ -13,5 +13,3 @@ async def main():
 if __name__ == "__main__":
      print("Bot is starting...")
      loop.run_until_complete(main())
-    
-       
