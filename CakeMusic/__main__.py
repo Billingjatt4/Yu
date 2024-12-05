@@ -1,4 +1,5 @@
 import asyncio, logging
+from logging.handlers import RotatingFileHandler
 from pyrogram import idle  
 from CakeMusic import bot, app, call
 from CakeMusic.plugins import ALL_MODULES
