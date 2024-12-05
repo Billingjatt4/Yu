@@ -23,7 +23,7 @@ async def main():
 
 # Enable logging to view errors
 logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger(Bot)
+logger = logging.getLogger(bot)
 
 
 # List of plugins to be imported
