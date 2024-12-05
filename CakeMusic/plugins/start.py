@@ -4,7 +4,7 @@ from CakeMusic.plugins.play import *
 from pyrogram import Client, filters as pyrofl
 from pyrogram.enums import ChatMemberStatus, ChatType
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
-
+from typing import Union, List, Pattern
 
 
 # Command & Callback Handlers
