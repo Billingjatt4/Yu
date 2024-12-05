@@ -9,7 +9,7 @@ LOGGER = logging.getLogger("YukkiMusic")
 
 async def main():
       LOGGER.info("✅ All Directories Updated.")
-      
+      await bot.start() 
 
 if __name__ == "__main__":
     loop.run_until_complete(main())
