@@ -590,7 +590,7 @@ async def get_call_status(chat_id):
     return call_status
 
 
-@bot.on_message(cdz(["play", "vplay"]) & ~pyrofl.private)
+@bot.on_message(filters.command(["play", "vplay"]) & filters.group)
 async def stream_audio_or_video(client, message):
     try:
         await message.delete()
