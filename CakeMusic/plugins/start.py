@@ -1,15 +1,7 @@
 from CakeMusic import bot
-from CakeMusic import *
-from CakeMusic.plugins.play import *
 from pyrogram import Client, filters
 from pyrogram.enums import ChatMemberStatus, ChatType
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
-from typing import Union, List, Pattern
-
-
-# Command & Callback Handlers
-def cdx(commands: Union[str, List[str]]):
-    return pyrofl.command(commands, ["/", "!", "."])
 
 
 @bot.on_message(filters.command(["start", "help"]) & filters.private)
