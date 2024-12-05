@@ -1,3 +1,5 @@
+from CakeMusic import bot, mongodb
+from pyrogram import Client, filters
 
 # Mongo Database Functions
 
