@@ -6,6 +6,12 @@ from pyrogram.enums import ChatMemberStatus, ChatType
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 
+
+# Command & Callback Handlers
+def cdx(commands: Union[str, List[str]]):
+    return pyrofl.command(commands, ["/", "!", "."])
+
+
 @bot.on_message(cdx(["start", "help"]) & pyrofl.private)
 async def start_message_private(client, message):
     user_id = message.from_user.id
