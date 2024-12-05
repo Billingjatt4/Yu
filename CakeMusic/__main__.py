@@ -13,6 +13,6 @@ async def main():
       await idle()
     
 if __name__ == "__main__":
-    loop.run_until_complete(main())
+   # loop.run_until_complete(main())
     print("Bot is starting...")
        
