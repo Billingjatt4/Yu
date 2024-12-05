@@ -6,7 +6,13 @@ from pyrogram import Client, filters
 chatsdb = mongodb.chatsdb
 usersdb = mongodb.usersdb
 
+# Memory Database
 
+ACTIVE_AUDIO_CHATS = []
+ACTIVE_VIDEO_CHATS = []
+ACTIVE_MEDIA_CHATS = []
+
+QUEUE = {}
 
 # Served Chats
 
