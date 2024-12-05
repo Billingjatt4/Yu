@@ -1,4 +1,4 @@
-import asyncio, logging
+import asyncio, logging, sys, os
 from pyrogram import idle  
 from CakeMusic import bot, app, call
 from CakeMusic.plugins import ALL_MODULES
@@ -10,7 +10,7 @@ LOGGER = logging.getLogger("YukkiMusic")
 async def main():
       LOGGER.info("✅ All Directories Updated.")
       LOGGER.info("✅ Required Variables Are Collected.")
-        await asyncio.sleep(1)
+      await asyncio.sleep(1)
       LOGGER.info("🌀 Starting All Clients ...")
     try:
         await bot.start()
