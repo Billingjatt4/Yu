@@ -1,11 +1,12 @@
-import asyncio
-from pyrogram import idle
+import os, asyncio, importlib
+from pathlib import Path 
+from pyrogram import idle  
 from CakeMusic import bot, app, call
 
 loop = asyncio.get_event_loop()
 
 async def main():
-      plugins_path = CakeMusic/plugins  # Get the plugins directory
+      plugins_path = Path("./plugins")  # Get the plugins directory
       plugin_files = [f.stem for f in plugins_path.glob("*.py") if f.is_file() and not f.stem.startswith("__")]
 
       for plugin in plugin_files:
