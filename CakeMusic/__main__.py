@@ -1,4 +1,4 @@
-import os, logging
+import os, logging, asyncio
 from CakeMusic import app as bot
 from CakeMusic.plugins.play import app, call
 from logging.handlers import RotatingFileHandler
