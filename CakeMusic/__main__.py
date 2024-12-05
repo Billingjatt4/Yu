@@ -5,10 +5,14 @@ from CakeMusic import bot, app, call
 loop = asyncio.get_event_loop()
 
 async def main():
-      await bot.start() 
-      await app.start()
+      # Run Bot
+      await bot.start()  
+      # Run Assistant
+      await app.start() 
+      # Run Py-TgCalls
       await call.start() 
-      await idle()
+      # Make client On
+      await idle() 
     
 if __name__ == "__main__":
      print("Bot is starting...")
