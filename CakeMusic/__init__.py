@@ -14,13 +14,6 @@ app = Client(
 )
 
 
-# Dynamically load plugins
-PLUGIN_DIR = "plugins"
-for plugin_file in glob.glob(f"{PLUGIN_DIR}/*.py"):
-    plugin_name = os.path.basename(plugin_file)[:-3]
-    if plugin_name != "__init__":
-        __import__(f"{PLUGIN_DIR}.{plugin_name}")
-
 def cdx(commands: Union[str, List[str]]):
     return pyrofl.command(commands, ["/", "!", "."])
 
