@@ -1,6 +1,10 @@
+import time
 from config import *
 from pyrogram import Client
 from pytgcalls import PyTgCalls
+from pytgcalls.types import GroupCallConfig
+from motor.motor_asyncio import AsyncIOMotorClient
+
 
 
 # Bot Client
@@ -24,8 +28,8 @@ call = PyTgCalls(app)
 call_config = GroupCallConfig(auto_start=False)
 
 # Mongo db Database
-mongo_async_cli = _mongo_async_(MONGO_DB_URL)
-mongodb = mongo_async_cli.vivan
+mongo_async_cli = AsyncIOMotorClient(MONGO_DB_URL)
+mongodb = mongo_async_cli.adityaxdb
 
 # store start time
 __start_time__ = time.time()
