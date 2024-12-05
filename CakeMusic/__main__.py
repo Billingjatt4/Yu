@@ -23,17 +23,3 @@ async def main():
 if __name__ == "__main__":
      print("Bot is starting...")
      loop.run_until_complete(main())
-
-
-
-import os
-import importlib
-from pathlib import Path
-
-def load_plugins():
-    
-if __name__ == "__main__":
-    load_plugins()
-    print("All plugins imported successfully.")
-
-
