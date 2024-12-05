@@ -1,8 +1,6 @@
 from typing import Union, List, Pattern
 from pyrogram import Client, filters as pyrofl
 from config import *
-import os
-import glob
 
 
 
