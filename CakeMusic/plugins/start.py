@@ -1,4 +1,4 @@
-from CakeMusic import app as bot
+from CakeMusic import bot
 from CakeMusic import *
 from pyrogram import Client, filters as pyrofl
 from pyrogram.enums import ChatMemberStatus, ChatType
