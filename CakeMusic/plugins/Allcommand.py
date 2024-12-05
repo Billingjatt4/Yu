@@ -1,4 +1,4 @@
-from CakeMusic import bot
+from CakeMusic import app as bot
 from CakeMusic import *
 
 import aiohttp, aiofiles, asyncio, base64, logging
